@@ -1,0 +1,6 @@
+FUNCTION servo_init();
+
+FUNCTION set_angle
+(
+	uint8 pin IN, uint16 angle IN
+);

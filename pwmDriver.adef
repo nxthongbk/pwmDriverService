@@ -1,0 +1,36 @@
+executables:
+{
+	pwmdriver = ( pwmDriverComponent )
+}
+
+processes:
+{
+	envVars:
+	{
+		LE_LOG_LEVEL = DEBUG
+	}
+
+	run:
+	{
+		( pwmdriver )
+	}
+
+	maxCoreDumpFileBytes: 512K
+	maxFileBytes: 512K
+}
+
+requires:
+{  
+
+    device:
+	{		
+        [rw]    /dev/i2c-0  /dev/i2c-0 // Get read and write access to the i2c-0.
+	}
+}
+
+extern:
+{
+	pwmdriver.pwmDriverComponent.ma_pwm
+}
+version: 1.0.0
+maxFileSystemBytes: 512K

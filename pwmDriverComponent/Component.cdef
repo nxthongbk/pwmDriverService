@@ -1,0 +1,12 @@
+sources:
+{
+	pwmDriverComponent.c
+}
+
+provides:
+{
+	api:
+	{
+		$CURDIR/../ma_pwm.api
+	}
+}
